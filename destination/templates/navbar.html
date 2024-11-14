@@ -1,0 +1,58 @@
+
+<header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="{% url 'home' %}">Travel Burundi</a>
+        </div>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="{% url 'destinations' %}">Destinations</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-auth">
+            {% if user.is_authenticated %}
+                <ul>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                    <li><a href="{% url 'bookings' %}">My Bookings</a></li>
+                    <!-- Notification Icon -->
+                    <li>
+                        <a href="{% url 'notifications' %}" class="notification-icon">
+                          
+                            {% if user.notifications.unread_count > 0 %}
+                                <span class="badge">{{ user.notifications.unread_count }}</span>
+                            {% endif %}
+                        </a>
+                    </li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            {% else %}
+                <ul>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Sign Up</a></li>
+                </ul>
+            {% endif %}
+        </div>
+        <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
+    </nav>
+</header>
+
+<!-- Mobile Navbar (Optional) -->
+<div id="navbar-mobile" class="navbar-mobile hidden">
+    <ul>
+        <li><a href="{% url 'destinations' %}">Destinations</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'bookings' %}">My Bookings</a></li>
+            <li><a href="{% url 'notifications' %}">Notifications</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Sign Up</a></li>
+        {% endif %}
+    </ul>
+</div>
+

@@ -1,15 +1,70 @@
-<h2>Login</h2>
-<form method="post">
-    {% csrf_token %}
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required>
-    
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required>
-    
-    <button type="submit">Login</button>
-</form>
-<p>
-    <a href="{% url 'reset_password' %}">Forgot Password?</a>
-</p>
-<p>Don't have an account? <a href="{% url 'register' %}">Register here</a>.</p>
+<html>
+<head>
+    <title>VoyageLink Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #e9eef5;
+            font-size: 16px;
+            color: #5a7d9a;
+        }
+        a {
+            color: #5a7d9a;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        .signup {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VoyageLink</h1>
+        <h2>Welcome back!</h2>
+        <input type="text" placeholder="username">
+        <input type="password" placeholder="Password">
+        <a href="#">Forgot password?</a>
+        <button type="submit"class="btn">Log in</button>
+        <div class="signup">New user? <a href="#">Sign Up</a></div>
+    </div>
+</body>
+</html>

@@ -1,149 +1,399 @@
-/* General body and font settings */
-body {
-    font-family: 'Arial', sans-serif;
+:root{
+    --bluelight:#4A90E2;
+    --green-forest:#2C6E49;
+    --yellow-gold:#F5A623;
+    --beige-light:#F4F1E1;
+    --white-pure:#ffffff;
+    --gray-dark:#333333;
+    --orange-light:#F8A72C;
+    --blue-navy:#003366;
+}
+*{
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+}
+body{
+    background:var(--beige-light);
+    color: var(--gray-dark);
+    padding: .2rem;
 }
 
-/* Navbar container */
+
 .navbar {
-    background-color: #b69393;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .navbar-container {
     display: flex;
-    justify-content: space-between;
+    border-radius: 8px;
+    background: var(--bluelight);
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
+    color: var(--blue-navy);
+    justify-content: space-between;
+    padding: 1rem 2rem;
+   
 }
 
-/* Navbar links */
-.navbar ul {
+.navbar-brand a {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navbar-links ul,
+.navbar-auth ul {
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
-.navbar ul li {
-    margin: 0 20px;
+.navbar-links ul li,
+.navbar-auth ul li {
+    margin-left: 1rem;
 }
 
-.navbar ul li a {
-    color: white;
+.navbar-links ul li a,
+.navbar-auth ul li a {
+   
     text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    display: block;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 0.5rem 1rem;
 }
 
-/* Navbar link hover effect */
-.navbar ul li a:hover {
-    background-color: #555;
+.navbar-links ul li a:hover,
+.navbar-auth ul li a:hover {
+    color:var(--white-pure);
+    border-radius: 4px;
 }
 
-/* Active link state */
-.navbar ul li a.active {
-    background-color: #007BFF;
-}
-
-/* Navbar for authenticated users (logged in) */
-.navbar.logged-in ul li.register,
-.navbar.logged-in ul li.login {
+/* Toggle button styling for mobile */
+.navbar-toggle {
     display: none;
-}
-
-.navbar.logged-in ul li.logout {
-    display: block;
-}
-
-/* Navbar for unauthenticated users (not logged in) */
-.navbar.logged-out ul li.logout {
-    display: none;
-}
-
-.navbar ul li button {
-    background-color: #007BFF;
-    color: white;
+    background: none;
+    color: var(--orange-light);
+    font-size: 1.5rem;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-.navbar ul li button:hover {
-    background-color: #0056b3;
-}
-
-/* Dropdown menu for profile if needed */
-.profile-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.profile-dropdown-content {
-    display: none;
+/* Mobile Navbar */
+.navbar-mobile {
     position: absolute;
-    right: 0;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    background: var(--bluelight);
+    top: 60px;
+    padding: 1rem 2rem;
+    align-items: center;
+    width: 97.5%;
+    display: none;
 }
 
-.profile-dropdown:hover .profile-dropdown-content {
-    display: block;
+.navbar-mobile ul {
+    list-style: none;
+    padding: 1rem;
 }
 
-.profile-dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+.navbar-mobile ul li {
+    margin: 1rem 0;
+}
+
+.navbar-mobile ul li a {
+    color: var(--yellow-gold);
     text-decoration: none;
-    display: block;
+    font-size: 1.2rem;
 }
 
-.profile-dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Responsive styling */
+/* Display toggle button on mobile */
 @media (max-width: 768px) {
-    .navbar .navbar-container {
-        flex-direction: column;
-        align-items: flex-start;
+    .navbar-links,
+    .navbar-auth {
+        display: none;
     }
 
-    .navbar ul {
-        flex-direction: column;
-        width: 100%;
+    .navbar-toggle {
+        display: block;
+        padding: .2rem;
+        
     }
 
-    .navbar ul li {
-        width: 100%;
-        text-align: left;
-        padding: 10px 15px;
+    .navbar-mobile.hidden {
+        display: none;
     }
 
-    .navbar ul li a {
-        padding: 12px;
-    }
-
-    .navbar ul li button {
-        width: 100%;
-        padding: 12px;
+    .navbar-mobile {
+        display: block;
+        padding: .2rem;
     }
 }
+
+        /* Carousel Container */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            top: 1rem;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Slide Wrapper */
+        .carousel-wrapper {
+            display: flex;
+            transition: transform .5s ease-in-out;
+        }
+
+        /* Individual Slide */
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            color: white;
+        }
+
+        /* Image Styling */
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Content Overlay */
+        .content-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .content-overlay h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content-overlay p {
+            margin: 5px 0 0;
+            font-size: 16px;
+        }
+
+        /* Navigation Arrows */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-arrow.left {
+            left: 10px;
+        }
+
+        .carousel-arrow.right {
+            right: 10px;
+        }
+
+           /* Destinations Section Container */
+           .destinations-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .destinations-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Grid Layout for Destinations */
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            
+        }
+
+        /* Individual Destination Card */
+        .destination-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .destination-card:hover {
+            transform: scale(1.05);
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Destination Content Overlay */
+        .destination-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .destination-content h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .destination-content p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+         /* Activities Section Container */
+         .activities-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .activities-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Grid Layout for Activities */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Individual Activity Card */
+        .activity-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: scale(1.05);
+        }
+
+        .activity-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Activity Content Overlay */
+        .activity-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .activity-content h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .activity-content p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        /* Testimonials Section Container */
+        .testimonials-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .testimonials-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Grid Layout for Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Individual Testimonial Card */
+        .testimonial-card {
+            position: relative;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            float: left;
+            margin-right: 15px;
+        }
+
+        .testimonial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-content {
+            overflow: hidden;
+        }
+
+        .testimonial-content h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .testimonial-content p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }

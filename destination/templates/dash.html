@@ -1,0 +1,277 @@
+<html>
+ <head>
+  <title>
+   Crypto Sentiment Dashboard
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #2c2c2c;
+            position: fixed;
+            padding: 20px;
+        }
+        .sidebar .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .sidebar .profile img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .sidebar .profile .name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .sidebar .profile .view-profile {
+            font-size: 14px;
+            color: #888;
+        }
+        .sidebar .menu {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar .menu li {
+            margin: 15px 0;
+        }
+        .sidebar .menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar .menu li a i {
+            margin-right: 10px;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .search {
+            display: flex;
+            align-items: center;
+        }
+        .header .search input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+        }
+        .header .search i {
+            font-size: 20px;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+            width: 48%;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card .chart {
+            height: 150px;
+            background: url('https://placehold.co/300x150') no-repeat center center;
+            background-size: cover;
+        }
+        .highlight-posts {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .highlight-posts h3 {
+            margin-top: 0;
+        }
+        .highlight-posts .post {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .highlight-posts .post .content {
+            display: flex;
+            align-items: center;
+        }
+        .highlight-posts .post .content i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .highlight-posts .post .time {
+            color: #888;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="sidebar">
+   <div class="profile">
+    <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/7Tfj0Do7ytyBNae0It9rN0jdQ6iw0soL5EGQlNY8ud4MfzhnA.jpg" width="50"/>
+    <div>
+     <div class="name">
+      Username
+     </div>
+     <div class="view-profile">
+      View profile
+     </div>
+    </div>
+   </div>
+   <ul class="menu">
+    <li>
+     <a href="#">
+      <i class="fas fa-home">
+      </i>
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-search">
+      </i>
+      Explore
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-inbox">
+      </i>
+      Inbox
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-bell">
+      </i>
+      Notification
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-envelope">
+      </i>
+      Messages
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fas fa-bookmark">
+      </i>
+      Bookmarks
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="content">
+   <div class="header">
+    <div class="title">
+     Crypto Sentiment Dashboard
+    </div>
+    <div class="search">
+     <input placeholder="Search" type="text"/>
+     <i class="fas fa-cog">
+     </i>
+     <i class="fas fa-bell">
+     </i>
+    </div>
+   </div>
+   <div class="cards">
+    <div class="card">
+     <h3>
+      Sentiment Analysis
+     </h3>
+     <div class="chart">
+     </div>
+     <div>
+      75% Positive
+     </div>
+     <div>
+      Last 24h
+      <span style="color: green;">
+       +5%
+      </span>
+     </div>
+    </div>
+    <div class="card">
+     <h3>
+      Bitcoin Popularity
+     </h3>
+     <div class="chart">
+     </div>
+     <div>
+      1200 Tweets
+     </div>
+     <div>
+      Last 7d
+      <span style="color: red;">
+       -2%
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="highlight-posts">
+    <h3>
+     Highlight posts
+    </h3>
+    <div class="post">
+     <div class="content">
+      <i class="fab fa-twitter">
+      </i>
+      <div>
+       Tweet content @elonmusk
+      </div>
+     </div>
+     <div class="time">
+      1h ago
+     </div>
+    </div>
+    <div class="post">
+     <div class="content">
+      <i class="fab fa-twitter">
+      </i>
+      <div>
+       Tweet content @jack
+      </div>
+     </div>
+     <div class="time">
+      2d ago
+     </div>
+    </div>
+    <div class="post">
+     <div class="content">
+      <i class="fab fa-twitter">
+      </i>
+      <div>
+       Tweet content @vitalik
+      </div>
+     </div>
+     <div class="time">
+      3d ago
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

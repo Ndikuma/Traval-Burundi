@@ -1,0 +1,213 @@
+<html>
+ <head>
+  <title>
+   Booking Summary
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #F7F7F7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+        .property-card {
+            display: flex;
+            align-items: center;
+            background-color: #F7F7F7;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .property-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+        .property-info {
+            flex-grow: 1;
+        }
+        .property-info h2 {
+            font-size: 16px;
+            margin: 0;
+        }
+        .property-info p {
+            font-size: 14px;
+            color: #717171;
+            margin: 5px 0 0 0;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+        .section p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .section .edit {
+            color: #007BFF;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .payment-method {
+            display: flex;
+            align-items: center;
+        }
+        .payment-method img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            background-color: #007BFF;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <i class="fas fa-arrow-left">
+    </i>
+    <h1>
+     Yosemite, CA
+    </h1>
+   </div>
+   <div class="property-card">
+    <div class="property-info">
+     <p>
+      Entire house
+     </p>
+     <h2>
+      Architectural Estate Dramatic Ocean Views
+     </h2>
+     <p>
+      Rating: 4.83
+     </p>
+    </div>
+    <img alt="Image of a modern architectural estate with dramatic ocean views" height="60" src="https://storage.googleapis.com/a1aa/image/UVVLgNIY17q9OVQLgCjxbhQAfqwqYBEDpbKiz4vXA0EU6c4JA.jpg" width="60"/>
+   </div>
+   <div class="section">
+    <h3>
+     Your trip
+    </h3>
+    <div class="total">
+     <p>
+      Dates
+     </p>
+     <p class="edit">
+      Edit
+     </p>
+    </div>
+    <p>
+     Jan 11–16
+    </p>
+    <div class="total">
+     <p>
+      Guests
+     </p>
+     <p class="edit">
+      Edit
+     </p>
+    </div>
+    <p>
+     1 guest
+    </p>
+   </div>
+   <div class="section">
+    <h3>
+     Your total
+    </h3>
+    <div class="total">
+     <p>
+      5 nights
+     </p>
+     <p>
+      $9,066
+     </p>
+    </div>
+    <div class="total">
+     <p>
+      Taxes
+     </p>
+     <p>
+      $953
+     </p>
+    </div>
+    <div class="total">
+     <p>
+      Total
+     </p>
+     <p>
+      $10,020
+     </p>
+    </div>
+   </div>
+   <div class="section">
+    <h3>
+     Pay with
+    </h3>
+    <div class="total">
+     <div class="payment-method">
+      <img alt="Visa logo" height="25" src="https://storage.googleapis.com/a1aa/image/C7dcEq0fleoxLUEDZDegu9EB9xsaFXa1EAE5tW9NDOLMpzhnA.jpg" width="40"/>
+      <p>
+       ... 4975
+      </p>
+     </div>
+     <p class="edit">
+      Edit
+     </p>
+    </div>
+   </div>
+   <div class="section">
+    <h3>
+     Cancellation policy
+    </h3>
+    <p>
+     Cancel before Jan 4 for a partial refund. After that, this reservation is non-refundable.
+    </p>
+   </div>
+   <a class="button" href="#">
+    Request to book
+   </a>
+  </div>
+ </body>
+</html>

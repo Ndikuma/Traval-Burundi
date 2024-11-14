@@ -3,12 +3,14 @@ from django.contrib.auth import login, logout
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Profile, Wallet
+from .models import Destination, Notification, Profile, Wallet
 
 from .forms import RegistrationForm
 
 def home(request):
     return render(request, 'index.html')
+
+
 def register(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
@@ -60,19 +62,30 @@ def user_logout(request):
     """
     logout(request)
     messages.success(request, "You have been logged out.")
-    return redirect('home')@login_required
-def profile(request):
-    return render(request, 'profile.html')
+    return redirect('home')
+
+def destinations_view(request):
+    destinations = Destination.objects.all()
+    return render(request, 'destinations.html', {'destinations': destinations})
+
+def about_view(request):
+    return render(request, 'dasb.html')
+
+def contact_view(request):
+    return render(request, 'contact.html')
 
 @login_required
-def partner_dashboard(request):
-    return render(request, 'partner_dashboard.html')
+def profile_view(request):
+    return render(request, 'auth/profile.html', {'user': request.user})
 
 @login_required
-def partner_destinations(request):
-    return render(request, 'partner_destinations.html')
+def notifications_view(request):
+    notifications = Notification.objects.filter(user=request.user).order_by('-created_at')
+    # Mark notifications as read
+    notifications.update(is_read=True)
+    return render(request, 'notifications.html', {'notifications': notifications})
 
 @login_required
-def my_bookings(request):
-    return render(request, 'my_bookings.html')
-
+def bookings_view(request):
+    bookings = request.user.booking_set.all()  # Assuming User has related bookings
+    return render(request, 'bookings.html', {'bookings': bookings})

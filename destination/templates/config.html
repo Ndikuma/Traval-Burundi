@@ -1,0 +1,190 @@
+<html>
+ <head>
+  <title>
+   Booking Confirmation
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .hotel-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f3f4;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .hotel-info img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+        }
+        .hotel-info div {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        .hotel-info h2 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .hotel-info p {
+            font-size: 14px;
+            color: #5f6368;
+            margin: 0;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+        }
+        .section p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .section .edit {
+            float: right;
+            color: #1a73e8;
+            cursor: pointer;
+        }
+        .price-summary, .payment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price-summary p, .payment p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .payment img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .complete-booking {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #1a73e8;
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <i class="fas fa-arrow-left">
+    </i>
+    <h1>
+     Booking Confirmation
+    </h1>
+   </div>
+   <div class="hotel-info">
+    <div>
+     <h2>
+      The Ritz-Carlton, Half Moon Bay
+     </h2>
+     <p>
+      Half Moon Bay, California
+     </p>
+    </div>
+    <img alt="Hotel view with a balcony and cityscape in the background" height="60" src="https://storage.googleapis.com/a1aa/image/5L1uxs5EtcaWJZMvxmB0wygEVk3fAJYVXL3Lg8m4jifjP6wTA.jpg" width="60"/>
+   </div>
+   <div class="section">
+    <h3>
+     Check-in
+    </h3>
+    <p>
+     <i class="fas fa-calendar-alt">
+     </i>
+     Fri, Jan 7
+    </p>
+   </div>
+   <div class="section">
+    <h3>
+     Checkout
+    </h3>
+    <p>
+     <i class="fas fa-calendar-alt">
+     </i>
+     Mon, Jan 10
+    </p>
+   </div>
+   <div class="section">
+    <h3>
+     Guests
+     <span class="edit">
+      Edit
+     </span>
+    </h3>
+    <p>
+     1 room, 2 adults
+    </p>
+   </div>
+   <div class="section price-summary">
+    <h3>
+     Price summary
+    </h3>
+    <p>
+     $3,000
+    </p>
+    <p>
+     Value of the item
+    </p>
+   </div>
+   <div class="section payment">
+    <h3>
+     Payment
+     <span class="edit">
+      Edit
+     </span>
+    </h3>
+    <div>
+     <img alt="Visa logo" height="20" src="https://storage.googleapis.com/a1aa/image/mK8AQ1XLEGK2KhyXTxiWRe0uPJVN0e62m5oAcOL243RnP6wTA.jpg" width="40"/>
+     <p>
+      ... 4975
+     </p>
+    </div>
+   </div>
+   <button class="complete-booking">
+    Complete Booking
+   </button>
+  </div>
+ </body>
+</html>

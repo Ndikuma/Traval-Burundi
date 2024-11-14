@@ -1,0 +1,317 @@
+<html>
+ <head>
+  <title>
+   Voyagelink Dashboard
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F7FA;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .header p {
+            color: #6B7280;
+            margin: 5px 0;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .buttons .list-button {
+            background-color: #E5E7EB;
+            color: #111827;
+        }
+        .buttons .update-button {
+            background-color: #3B82F6;
+            color: #FFFFFF;
+        }
+        .summary {
+            margin: 20px 0;
+        }
+        .summary h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .summary .summary-cards {
+            display: flex;
+            justify-content: space-between;
+        }
+        .summary .card {
+            background-color: #F3F4F6;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            width: 30%;
+        }
+        .summary .card h3 {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .summary .card p {
+            font-size: 14px;
+            color: #111827;
+        }
+        .activity {
+            margin: 20px 0;
+        }
+        .activity h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .activity .activity-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .activity .activity-item i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .activity .activity-item p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .activity .activity-item .amount {
+            color: #3B82F6;
+        }
+        .manage {
+            margin: 20px 0;
+        }
+        .manage h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .manage .manage-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #F3F4F6;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .manage .manage-item i {
+            font-size: 20px;
+        }
+        .manage .manage-item p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #FFFFFF;
+            border-top: 1px solid #E5E7EB;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 400px;
+        }
+        .footer a {
+            text-align: center;
+            color: #6B7280;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .footer a i {
+            display: block;
+            font-size: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <img alt="Profile picture of a woman" height="80" src="https://storage.googleapis.com/a1aa/image/cecY3aPk0DQhPyGlp2CV45xZcy7QtfavBflxU6RDaWvi4zhnA.jpg" width="80"/>
+    <h1>
+     Voyagelink
+    </h1>
+    <p>
+     Hi, Lila
+    </p>
+    <p>
+     Welcome back to Voyagelink. Your dashboard is here.
+    </p>
+   </div>
+   <div class="buttons">
+    <button class="list-button">
+     List a new destination
+    </button>
+    <button class="update-button">
+     Update pricing
+    </button>
+   </div>
+   <div class="summary">
+    <h2>
+     Performance summary
+    </h2>
+    <div class="summary-cards">
+     <div class="card">
+      <h3>
+       Bookings
+      </h3>
+      <p>
+       12
+      </p>
+     </div>
+     <div class="card">
+      <h3>
+       Earnings
+      </h3>
+      <p>
+       $3,500
+      </p>
+     </div>
+     <div class="card">
+      <h3>
+       Reviews
+      </h3>
+      <p>
+       4.5
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="activity">
+    <h2>
+     Activity
+    </h2>
+    <div class="activity-item">
+     <i class="fas fa-calendar-alt">
+     </i>
+     <p>
+      New booking
+      <span class="amount">
+       $300
+      </span>
+     </p>
+    </div>
+    <div class="activity-item">
+     <i class="fas fa-calendar-alt">
+     </i>
+     <p>
+      New review
+      <span class="amount">
+       4.8
+      </span>
+     </p>
+    </div>
+    <div class="activity-item">
+     <i class="fas fa-money-bill-wave">
+     </i>
+     <p>
+      Earnings transfer
+      <span class="amount">
+       $500
+      </span>
+     </p>
+    </div>
+    <div class="activity-item">
+     <i class="fas fa-calendar-alt">
+     </i>
+     <p>
+      New booking
+      <span class="amount">
+       $700
+      </span>
+     </p>
+    </div>
+    <div class="activity-item">
+     <i class="fas fa-calendar-alt">
+     </i>
+     <p>
+      New review
+      <span class="amount">
+       4.6
+      </span>
+     </p>
+    </div>
+   </div>
+   <div class="manage">
+    <h2>
+     Manage
+    </h2>
+    <div class="manage-item">
+     <i class="fas fa-gift">
+     </i>
+     <p>
+      Promotions
+     </p>
+     <i class="fas fa-arrow-right">
+     </i>
+    </div>
+    <div class="manage-item">
+     <i class="fas fa-globe">
+     </i>
+     <p>
+      Destinations
+     </p>
+     <i class="fas fa-arrow-right">
+     </i>
+    </div>
+    <div class="manage-item">
+     <i class="fas fa-folder">
+     </i>
+     <p>
+      Pricing
+     </p>
+     <i class="fas fa-arrow-right">
+     </i>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <a href="#">
+    <i class="fas fa-home">
+    </i>
+    Dashboard
+   </a>
+   <a href="#">
+    <i class="fas fa-calendar-alt">
+    </i>
+    Bookings
+   </a>
+   <a href="#">
+    <i class="fas fa-inbox">
+    </i>
+    Inbox
+   </a>
+   <a href="#">
+    <i class="fas fa-user">
+    </i>
+    Account
+   </a>
+  </div>
+ </body>
+</html>

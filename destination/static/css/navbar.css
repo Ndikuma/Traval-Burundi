@@ -1,0 +1,96 @@
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #f5e0e0;
+    color: white;
+}
+
+.navbar-brand a {
+    font-size: 1.5rem;
+    color: #453030;
+    text-decoration: none;
+}
+
+.navbar-links ul,
+.navbar-auth ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links ul li,
+.navbar-auth ul li {
+    margin-left: 1rem;
+}
+
+.navbar-links ul li a,
+.navbar-auth ul li a {
+    color: rgb(71, 43, 43);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-links ul li a:hover,
+.navbar-auth ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Toggle button styling for mobile */
+.navbar-toggle {
+    display: none;
+    background: none;
+    color: rgb(67, 48, 48);
+    font-size: 1.5rem;
+    border: none;
+}
+
+/* Mobile Navbar */
+.navbar-mobile {
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    margin: auto;
+    width: 100%;
+    display: none;
+}
+
+.navbar-mobile ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+.navbar-mobile ul li {
+    margin: 1rem 0;
+}
+
+.navbar-mobile ul li a {
+    color: rgb(255, 235, 235);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Display toggle button on mobile */
+@media (max-width: 768px) {
+    .navbar-links,
+    .navbar-auth {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+        
+    }
+
+    .navbar-mobile.hidden {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+}

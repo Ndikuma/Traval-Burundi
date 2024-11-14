@@ -1,0 +1,390 @@
+<html>
+ <head>
+  <title>
+   VoyageLink
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #fff;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar .auth-buttons a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #333;
+        }
+        .navbar .auth-buttons .signup {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-image: url('https://placehold.co/1200x400');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 15px;
+            border-radius: 30px;
+            border: 1px solid #eaeaea;
+            font-size: 16px;
+        }
+        .section {
+            padding: 40px 20px;
+        }
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .grid-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .grid-item p {
+            margin: 10px 0;
+        }
+        .grid-item .location {
+            color: #888;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-top: 1px solid #eaeaea;
+        }
+        .cta-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .cta-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .cta-section .cta-button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="navbar">
+   <div class="logo">
+    VoyageLink
+   </div>
+   <div class="nav-links">
+    <a href="#">
+     Destinations
+    </a>
+    <a href="#">
+     Activities
+    </a>
+    <a href="#">
+     Profile
+    </a>
+    <a href="#">
+     Bookings
+    </a>
+    <a href="#">
+     Contact
+    </a>
+   </div>
+   <div class="auth-buttons">
+    <a class="signup" href="#">
+     Sign up
+    </a>
+    <a class="login" href="#">
+     Log in
+    </a>
+   </div>
+  </div>
+  <div class="hero">
+   <h1>
+    Explore the world with Voyagelink
+   </h1>
+   <p>
+    Find and book experiences, destinations, and activities with your friends and family.
+   </p>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Where are you going?" type="text"/>
+  </div>
+  <div class="section">
+   <h2>
+    Featured destinations
+   </h2>
+   <div class="grid">
+    <div class="grid-item">
+     <img alt="Image of Chicago" height="200" src="https://storage.googleapis.com/a1aa/image/dPWhXAe4C13cB6mGVcReMLTtcwixDwuQkXpToLTAwwnrp6wTA.jpg" width="300"/>
+     <p>
+      Chicago
+     </p>
+     <p class="location">
+      CHI
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of San Francisco" height="200" src="https://storage.googleapis.com/a1aa/image/pjyg8eAJ2C29B6QaMb5ebXt67MUTSUKe3I10lhJ6BdZ0S1hnA.jpg" width="300"/>
+     <p>
+      San Francisco
+     </p>
+     <p class="location">
+      SF
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Miami" height="200" src="https://storage.googleapis.com/a1aa/image/YWNZo5iCaaLNPpGsmGYqrN9xdKY9YHXj243NueDRMAIiUd4JA.jpg" width="300"/>
+     <p>
+      Miami
+     </p>
+     <p class="location">
+      MIA
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of New York City" height="200" src="https://storage.googleapis.com/a1aa/image/DiIIIeKLKnRlO6jjkl62kjN33q5CsN3E4qmyjkdMJjThUd4JA.jpg" width="300"/>
+     <p>
+      New York City
+     </p>
+     <p class="location">
+      NYC
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Los Angeles" height="200" src="https://storage.googleapis.com/a1aa/image/jqiqgyKXiQ7IEROjVAa1LntQHN3e4CFW1PCJJ2UEjevSp6wTA.jpg" width="300"/>
+     <p>
+      Los Angeles
+     </p>
+     <p class="location">
+      LA
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Las Vegas" height="200" src="https://storage.googleapis.com/a1aa/image/eVnmBclhyTziI65eNsYecUkm5NY9xfJ83wA3f7Z9dRFfYqO8E.jpg" width="300"/>
+     <p>
+      Las Vegas
+     </p>
+     <p class="location">
+      LV
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Orlando" height="200" src="https://storage.googleapis.com/a1aa/image/GHThXTbpI9LxMRRxZ2hhtn1l2U5Qf6X7a5TxSbJAqpsmUd4JA.jpg" width="300"/>
+     <p>
+      Orlando
+     </p>
+     <p class="location">
+      ORL
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="section">
+   <h2>
+    Trending activities
+   </h2>
+   <div class="grid">
+    <div class="grid-item">
+     <img alt="Image of Universal Studios Hollywood" height="200" src="https://storage.googleapis.com/a1aa/image/Buaf7HRxmcwjSCexNGfgfnHGbuepHGohkEBgnkwNTaEbKVHeE.jpg" width="300"/>
+     <p>
+      Universal Studios Hollywood
+     </p>
+     <p class="location">
+      Hollywood, CA
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of The Metropolitan Museum of Art (The Met)" height="200" src="https://storage.googleapis.com/a1aa/image/Rc4rkWZLeRxGciSkgzCmQgYVFwKooJH9r4Fnn7Pe8ShLp6wTA.jpg" width="300"/>
+     <p>
+      The Metropolitan Museum of Art (The Met)
+     </p>
+     <p class="location">
+      New York, NY
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Grand Canyon National Park" height="200" src="https://storage.googleapis.com/a1aa/image/pgyWnk49zfQ7KCJHSsUTdea9h08WUdP8WfxSyz44znOPS1hnA.jpg" width="300"/>
+     <p>
+      Grand Canyon National Park
+     </p>
+     <p class="location">
+      Arizona
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Alcatraz Island" height="200" src="https://storage.googleapis.com/a1aa/image/pfmy7C55IRVqVyL1wgqlrD6BixTbbLZyherzwjndYXEJp6wTA.jpg" width="300"/>
+     <p>
+      Alcatraz Island
+     </p>
+     <p class="location">
+      San Francisco, CA
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Walt Disney World Resort" height="200" src="https://storage.googleapis.com/a1aa/image/3KO8MAtAuRJcG9y3cgPNeoxHf5gIFlP8hCS2LJqlHUWGp6wTA.jpg" width="300"/>
+     <p>
+      Walt Disney World Resort
+     </p>
+     <p class="location">
+      Lake Buena Vista, FL
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Empire State Building" height="200" src="https://storage.googleapis.com/a1aa/image/eanQaBMQ0wTgBqffOjbMu5Tjsr4l74Kq9exCrBMRebOLNVHeE.jpg" width="300"/>
+     <p>
+      Empire State Building
+     </p>
+     <p class="location">
+      New York, NY
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Disneyland Park" height="200" src="https://storage.googleapis.com/a1aa/image/mwx6uhWWGeWIeEnDXMue3ZpEsrLVL0GaIj8bWGqwLDfFmqDPB.jpg" width="300"/>
+     <p>
+      Disneyland Park
+     </p>
+     <p class="location">
+      Anaheim, CA
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="cta-section">
+   <h2>
+    Discover the best of the US
+   </h2>
+   <p>
+    From coast to coast, explore top destinations for travel and local experiences.
+   </p>
+   <button class="cta-button">
+    See all destinations
+   </button>
+  </div>
+  <div class="section">
+   <h2>
+    International destinations
+   </h2>
+   <div class="grid">
+    <div class="grid-item">
+     <img alt="Image of Paris" height="200" src="https://storage.googleapis.com/a1aa/image/VKwhzzvJxZoUHNj9XSJdMGRIZtskYDGfBNNney1EXZfJT1hnA.jpg" width="300"/>
+     <p>
+      Paris
+     </p>
+     <p class="location">
+      France
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of London" height="200" src="https://storage.googleapis.com/a1aa/image/DHa9u5H5duraPdzRlGo67kEUXsrIAOjzLKKn9TLl8qnZqO8E.jpg" width="300"/>
+     <p>
+      London
+     </p>
+     <p class="location">
+      United Kingdom
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Tokyo" height="200" src="https://storage.googleapis.com/a1aa/image/vXFUTR9hp9IGHx0ETMIYAxJ7z1qOmFAy8cWi1QpGXwnVqO8E.jpg" width="300"/>
+     <p>
+      Tokyo
+     </p>
+     <p class="location">
+      Japan
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Rome" height="200" src="https://storage.googleapis.com/a1aa/image/jV1flUQ0I138VK1mOWU68pqff7urnJaoGCk0CrW49NAfkqDPB.jpg" width="300"/>
+     <p>
+      Rome
+     </p>
+     <p class="location">
+      Italy
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Barcelona" height="200" src="https://storage.googleapis.com/a1aa/image/V9oET9bQ47JLGte2EyKPeTHWfaRhe8FnoAPe0292tbf9ZqO8E.jpg" width="300"/>
+     <p>
+      Barcelona
+     </p>
+     <p class="location">
+      Spain
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Sydney" height="200" src="https://storage.googleapis.com/a1aa/image/IwQKhJu9IFo2AVBGr7oLI1HX2yybQNCWiT3DSAL92iXUqO8E.jpg" width="300"/>
+     <p>
+      Sydney
+     </p>
+     <p class="location">
+      Australia
+     </p>
+    </div>
+    <div class="grid-item">
+     <img alt="Image of Dubai" height="200" src="https://storage.googleapis.com/a1aa/image/8nbdAIATGA6QEFsYGXiPVJmPjTHfduYTzJfhfjec7SmCmqDPB.jpg" width="300"/>
+     <p>
+      Dubai
+     </p>
+     <p class="location">
+      United Arab Emirates
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

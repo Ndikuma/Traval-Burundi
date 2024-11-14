@@ -1,0 +1,302 @@
+<html>
+ <head>
+  <title>
+   Explore Destinations
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F7FA;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: calc(100% - 40px);
+            padding: 10px;
+            border: 1px solid #E0E0E0;
+            border-radius: 5px;
+            background-color: #E8F0FE;
+            color: #5F6368;
+        }
+        .search-bar i {
+            font-size: 20px;
+            color: #5F6368;
+        }
+        h1 {
+            font-size: 24px;
+            color: #202124;
+            margin-bottom: 20px;
+        }
+        .filter-section {
+            margin-bottom: 20px;
+        }
+        .filter-section h2 {
+            font-size: 18px;
+            color: #202124;
+            margin-bottom: 10px;
+        }
+        .filter-section .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .filter-section .filter-options button,
+        .filter-section .filter-options .filter-option {
+            padding: 10px 15px;
+            border: 1px solid #E0E0E0;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            color: #5F6368;
+            cursor: pointer;
+        }
+        .filter-section .filter-options .filter-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .filter-section .filter-options .filter-option span {
+            flex-grow: 1;
+        }
+        .filter-section .filter-options .filter-option button {
+            margin-left: 10px;
+        }
+        .sort-section {
+            margin-bottom: 20px;
+        }
+        .sort-section .sort-options {
+            display: flex;
+            gap: 10px;
+        }
+        .sort-section .sort-options button {
+            padding: 10px 15px;
+            border: 1px solid #E0E0E0;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            color: #5F6368;
+            cursor: pointer;
+        }
+        .destination-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .destination-list .destination-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #E0E0E0;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            margin-bottom: 10px;
+        }
+        .destination-list .destination-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        .destination-list .destination-item .destination-info {
+            flex-grow: 1;
+        }
+        .destination-list .destination-item .destination-info h3 {
+            font-size: 16px;
+            color: #202124;
+            margin: 0;
+        }
+        .destination-list .destination-item .destination-info p {
+            font-size: 14px;
+            color: #5F6368;
+            margin: 5px 0 0;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Where are you going?" type="text"/>
+    <i class="fas fa-search">
+    </i>
+   </div>
+   <h1>
+    Explore destinations
+   </h1>
+   <div class="filter-section">
+    <h2>
+     Category
+    </h2>
+    <div class="filter-options">
+     <button>
+      Adventure
+     </button>
+     <button>
+      Beach
+     </button>
+     <button>
+      Island
+     </button>
+     <button>
+      Mountain
+     </button>
+    </div>
+   </div>
+   <div class="filter-section">
+    <h2>
+     Price range
+    </h2>
+    <div class="filter-options">
+     <div class="filter-option">
+      <span>
+       Under $500
+      </span>
+      <button>
+       Go
+      </button>
+     </div>
+     <div class="filter-option">
+      <span>
+       $500 - $1000
+      </span>
+      <button>
+       Go
+      </button>
+     </div>
+     <div class="filter-option">
+      <span>
+       Over $1000
+      </span>
+      <button>
+       Go
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="filter-section">
+    <h2>
+     Rating
+    </h2>
+    <div class="filter-options">
+     <div class="filter-option">
+      <span>
+       4.5+
+      </span>
+      <button>
+       Go
+      </button>
+     </div>
+     <div class="filter-option">
+      <span>
+       4.0+
+      </span>
+      <button>
+       Go
+      </button>
+     </div>
+     <div class="filter-option">
+      <span>
+       3.5+
+      </span>
+      <button>
+       Go
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="filter-section">
+    <h2>
+     Location
+    </h2>
+    <div class="filter-options">
+     <div class="filter-option">
+      <span>
+       West Coast
+      </span>
+      <button>
+       Go
+      </button>
+     </div>
+     <div class="filter-option">
+      <span>
+       East Coast
+      </span>
+      <button>
+       Go
+      </button>
+     </div>
+     <div class="filter-option">
+      <span>
+       Midwest
+      </span>
+      <button>
+       Go
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="sort-section">
+    <h2>
+     Sort by
+    </h2>
+    <div class="sort-options">
+     <button>
+      Price: low to high
+     </button>
+     <button>
+      Price: high to low
+     </button>
+     <button>
+      Rating
+     </button>
+    </div>
+   </div>
+   <ul class="destination-list">
+    <li class="destination-item">
+     <img alt="Scenic view of Maui, Hawaii" height="60" src="https://storage.googleapis.com/a1aa/image/P4r0594i72qwBVhzGQbwfleKR4SgZeduSjIT41jGuA2DQ0hnA.jpg" width="60"/>
+     <div class="destination-info">
+      <h3>
+       4.8 Maui, Hawaii
+      </h3>
+      <p>
+       $450/night
+      </p>
+     </div>
+    </li>
+    <li class="destination-item">
+     <img alt="Beautiful beach in St. Barts" height="60" src="https://storage.googleapis.com/a1aa/image/cG0fpnddk6WHIqAxM8uhddBGUrckK8e3qnOKKr7COYHEI6wTA.jpg" width="60"/>
+     <div class="destination-info">
+      <h3>
+       4.9 St. Barts
+      </h3>
+      <p>
+       $600/night
+      </p>
+     </div>
+    </li>
+    <li class="destination-item">
+     <img alt="Lush green fields in Ubud, Bali" height="60" src="https://storage.googleapis.com/a1aa/image/QMnkgiT4ul6dAZiulh8j9xWYX0hgjMe7ycveeVi8IsrHQ0hnA.jpg" width="60"/>
+     <div class="destination-info">
+      <h3>
+       4.7 Ubud, Bali
+      </h3>
+      <p>
+       $300/night
+      </p>
+     </div>
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>

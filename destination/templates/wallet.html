@@ -1,0 +1,189 @@
+<html>
+<head>
+    <title>VoyageLink Wallet</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .header .logo {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .header .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .header .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        .header .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .header .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 250px;
+            padding-right: 20px;
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .sidebar .menu {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar .menu li {
+            margin: 10px 0;
+        }
+        .sidebar .menu li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+        }
+        .sidebar .menu li a.active {
+            background-color: #f5f5f5;
+        }
+        .main-content {
+            flex: 1;
+        }
+        .main-content h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .wallet-section {
+            margin: 20px 0;
+        }
+        .wallet-section h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .wallet-section .balance {
+            font-size: 36px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        .wallet-section .button {
+            background-color: #f5f5f5;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .wallet-section .button:hover {
+            background-color: #eaeaea;
+        }
+        .transactions {
+            margin-top: 20px;
+        }
+        .transactions h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .transactions .transaction {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .transactions .transaction .details {
+            display: flex;
+            flex-direction: column;
+        }
+        .transactions .transaction .amount {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">VoyageLink</div>
+        <div class="nav">
+            <a href="#">Travel</a>
+            <a href="#">Explore</a>
+            <a href="#">Flights</a>
+            <a href="#">Hotels</a>
+        </div>
+        <div class="profile">
+            <button class="button">List your property</button>
+            <img src="https://storage.googleapis.com/a1aa/image/HGFP0iEUv0ITGhPHDytMPRwGBvaRme6XyLAJvw6UA3koWd4JA.jpg" alt="Profile picture" width="40" height="40">
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Partner Dashboard</h2>
+            <ul class="menu">
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a class="active" href="#">Wallet</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Wallet</h1>
+            <div class="wallet-section">
+                <h2>Current Balance</h2>
+                <div class="balance">$1,200.00</div>
+                <button class="button">Withdraw Funds</button>
+            </div>
+            <div class="transactions">
+                <h2>Recent Transactions</h2>
+                <div class="transaction">
+                    <div class="details">
+                        <span>Booking Payment</span>
+                        <span>Dec 25, 2023</span>
+                    </div>
+                    <div class="amount">+$500.00</div>
+                </div>
+                <div class="transaction">
+                    <div class="details">
+                        <span>Booking Payment</span>
+                        <span>Dec 20, 2023</span>
+                    </div>
+                    <div class="amount">+$300.00</div>
+                </div>
+                <div class="transaction">
+                    <div class="details">
+                        <span>Withdrawal</span>
+                        <span>Dec 15, 2023</span>
+                    </div>
+                    <div class="amount">-$200.00</div>
+                </div>
+                <div class="transaction">
+                    <div class="details">
+                        <span>Booking Payment</span>
+                        <span>Dec 10, 2023</span>
+                    </div>
+                    <div class="amount">+$600.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

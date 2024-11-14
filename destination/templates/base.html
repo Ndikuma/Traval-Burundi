@@ -5,68 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}VoyageLink{% endblock %}</title>
+
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="{% url 'home' %}" class="navbar-brand">VoyageLink</a>
-            <ul class="navbar-nav">
-                <!-- Home link is available to everyone -->
-                <li class="nav-item">
-                    <a href="{% url 'home' %}" class="nav-link">Home</a>
-                </li>
-
-                <!-- If the user is authenticated -->
-                {% if user.is_authenticated %}
-                    <!-- If the user is a partner -->
-                    {% if user.is_partner %}
-                        <li class="nav-item">
-                            <a href="{% url 'partner_dashboard' %}" class="nav-link">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'partner_destinations' %}" class="nav-link">My Destinations</a>
-                        </li>
-                    <!-- If the user is a customer -->
-                    {% elif user.is_customer %}
-                        <li class="nav-item">
-                            <a href="{% url 'my_bookings' %}" class="nav-link">My Bookings</a>
-                        </li>
-                    {% endif %}
-                    
-                    <li class="nav-item">
-                        <a href="{% url 'profile' %}" class="nav-link">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{% url 'logout' %}" class="nav-link">Logout</a>
-                    </li>
-                {% else %}
-                    <!-- If the user is not authenticated -->
-                    <li class="nav-item">
-                        <a href="{% url 'login' %}" class="nav-link">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{% url 'signup' %}" class="nav-link">Sign Up</a>
-                    </li>
-                {% endif %}
-            </ul>
-        </div>
-    </nav>
-
+    
     <!-- Main Content -->
     <div class="main-content">
+        {% include "navbar.html" %}
         {% block content %}{% endblock %}
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 VoyageLink. All Rights Reserved.</p>
-        </div>
-    </footer>
-    
+  
+    <script src="{% static 'js/scripts.js' %}"></script>
     {% block extra_js %}{% endblock %}
 </body>
 </html>

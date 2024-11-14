@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyagelink - Your Personalized Travel Experience</title>
+  <style>/* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Body and Main Layout */
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f7f7f7;
+    }
+    
+    /* Header Section */
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: #333;
+        color: white;
+    }
+    
+    #header .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    #header nav ul {
+        list-style: none;
+        display: flex;
+    }
+    
+    #header nav ul li {
+        margin: 0 15px;
+    }
+    
+    #header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    #header .cta-button {
+        background-color: #ff5722;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    #header .cta-button:hover {
+        background-color: #e64a19;
+    }
+    
+    /* Hero Section */
+    #hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://via.placeholder.com/1500x800');
+        background-size: cover;
+        color: white;
+        height: 500px;
+        text-align: center;
+    }
+    
+    #hero .hero-content {
+        max-width: 600px;
+    }
+    
+    #hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    
+    #hero p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .search-bar {
+        display: flex;
+    }
+    
+    .search-bar input {
+        padding: 10px;
+        flex: 1;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    
+    .search-bar button {
+        background-color: #ff5722;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    /* About Section */
+    #about {
+        padding: 40px;
+        background-color: #ffffff;
+        text-align: center;
+    }
+    
+    #about p {
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    /* Services Section */
+    #services {
+        padding: 40px;
+        background-color: #f2f2f2;
+        text-align: center;
+    }
+    
+    .service-cards {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .service-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        width: 30%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    /* How It Works Section */
+    #how-it-works {
+        padding: 40px;
+        text-align: center;
+    }
+    
+    .steps {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .step {
+        width: 30%;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .step h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Testimonials Section */
+    #testimonials {
+        padding: 40px;
+        background-color: #fff;
+        text-align: center;
+    }
+    
+    .testimonial-cards {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .testimonial-card {
+        width: 45%;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Footer Section */
+    #footer {
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+    }
+    
+    #footer .footer-links ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #footer .footer-links ul li {
+        margin: 0 10px;
+    }
+    
+    #footer .footer-links ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    #footer p {
+        margin-top: 20px;
+    }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="logo">
+            <h1>Voyagelink</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#signup" class="cta-button">Sign Up</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Explore Curated Travel Experiences</h2>
+            <p>Book your next adventure with ease. Find the best destinations, activities, and experiences.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for destinations or activities...">
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>What is Voyagelink?</h2>
+        <p>Voyagelink is your personalized travel companion, offering curated experiences, destination booking, and activity management. We help you discover new places, book your trips, and enjoy unforgettable experiences.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Curated Destinations</h3>
+                <p>Explore the most beautiful and exciting destinations around the world.</p>
+            </div>
+            <div class="service-card">
+                <h3>Activity Booking</h3>
+                <p>Find and book amazing activities like hiking, scuba diving, and more.</p>
+            </div>
+            <div class="service-card">
+                <h3>Easy Booking Management</h3>
+                <p>Manage your bookings, track your trips, and enjoy seamless experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Search</h3>
+                <p>Browse through our curated list of destinations and activities.</p>
+            </div>
+            <div class="step">
+                <h3>2. Book</h3>
+                <p>Select your dates, choose a package, and book your trip in a few clicks.</p>
+            </div>
+            <div class="step">
+                <h3>3. Enjoy</h3>
+                <p>Experience your adventure and create lasting memories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>"Voyagelink made my vacation seamless and unforgettable! Highly recommend."</p>
+                <span>- Sarah, Traveler</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"The booking process was simple, and the activity options were amazing!"</p>
+                <span>- John, Traveler</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Voyagelink</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

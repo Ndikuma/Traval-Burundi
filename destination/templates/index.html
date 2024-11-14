@@ -1,9 +1,238 @@
-{% extends 'base.html' %}
-
-{% block title %}Home Page - My Tourism App{% endblock %}
-
-{% block content %}
-    <h1>Welcome to Our Tourism App</h1>
-    <p>Explore amazing destinations and activities!</p>
-   <p><a href="">Check out destinations</a></p>  
-{% endblock %}
+<html>
+ <head>
+  <title>
+   Voyagelink
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #eee;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .header .right-icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .right-icons .icon {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .header .right-icons .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .header .right-icons .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .main-content {
+            padding: 40px;
+        }
+        .main-content h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+        .tabs {
+            display: flex;
+            margin-top: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .tabs a {
+            margin-right: 30px;
+            padding-bottom: 10px;
+            text-decoration: none;
+            color: #b0a18f;
+            font-weight: 500;
+        }
+        .tabs a.active {
+            color: #333;
+            border-bottom: 2px solid #4a4a4a;
+        }
+        .recommended {
+            margin-top: 40px;
+        }
+        .recommended h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+        .recommended .places {
+            display: flex;
+            margin-top: 20px;
+        }
+        .recommended .places .place {
+            margin-right: 20px;
+            text-align: center;
+        }
+        .recommended .places .place img {
+            width: 200px;
+            height: 120px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .quick-links {
+            margin-top: 40px;
+        }
+        .quick-links h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+        .quick-links .links {
+            display: flex;
+            margin-top: 20px;
+        }
+        .quick-links .links .link {
+            margin-right: 20px;
+            padding: 10px 20px;
+            background-color: #f5f0e9;
+            border-radius: 20px;
+            color: #4a4a4a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+  </style>
+ </head>
+ <body>
+  <header class="header">
+   <div class="logo">
+    Voyagelink
+   </div>
+   <nav>
+    <a href="#">
+     Explore
+    </a>
+    <a href="#">
+     Flights
+    </a>
+    <a href="#">
+     Hotels
+    </a>
+    <a href="#">
+     Car Rentals
+    </a>
+    <a href="#">
+     Guides
+    </a>
+   </nav>
+   <div class="right-icons">
+    <div class="icon">
+     Help
+    </div>
+    <div class="icon">
+     <i class="fas fa-globe">
+     </i>
+    </div>
+    <div class="icon">
+     <i class="fas fa-bars">
+     </i>
+    </div>
+    <div class="profile-pic">
+     <img alt="Profile picture of a user" height="40" src="https://storage.googleapis.com/a1aa/image/51A3I7vVmwrnN5CSYM7iGWk5X1vQu9LVkAfp8K1z7DPqYc4JA.jpg" width="40"/>
+    </div>
+   </div>
+  </header>
+  <div class="main-content">
+   <h1>
+    Welcome back, Stacy
+   </h1>
+   <div class="tabs">
+    <a class="active" href="#">
+     For you
+    </a>
+    <a href="#">
+     Your trips
+    </a>
+    <a href="#">
+     Wishlists
+    </a>
+   </div>
+   <div class="recommended">
+    <h2>
+     Recommended for you
+    </h2>
+    <div class="places">
+     <div class="place">
+      <img alt="Beach view in Hawaii" height="120" src="https://storage.googleapis.com/a1aa/image/3eaQYrJS7VUlASxBjFxRL0mYWo9irYbjr96d4wf6KPNIx4wTA.jpg" width="200"/>
+      <div>
+       Hawaii
+      </div>
+     </div>
+     <div class="place">
+      <img alt="Bridge in London" height="120" src="https://storage.googleapis.com/a1aa/image/bwy2fAK4sOX9dSL0xlYuZ7C1Ht5uefgeBELCAfnNaWNQJGHeE.jpg" width="200"/>
+      <div>
+       London
+      </div>
+     </div>
+     <div class="place">
+      <img alt="Skyline of New York" height="120" src="https://storage.googleapis.com/a1aa/image/rG3OSMM0TlYiEFqWoubebGSNTZKh6BaPQhVd3TAfeWntixhnA.jpg" width="200"/>
+      <div>
+       New York
+      </div>
+     </div>
+     <div class="place">
+      <img alt="Eiffel Tower in Paris" height="120" src="https://storage.googleapis.com/a1aa/image/mAddm4bfGZQbFi3TnCQ9W1AwU4lg2eMkV5GuY4Vrn7hNx4wTA.jpg" width="200"/>
+      <div>
+       Paris
+      </div>
+     </div>
+     <div class="place">
+      <img alt="Cityscape of Tokyo" height="120" src="https://storage.googleapis.com/a1aa/image/tQiPs7bXcgrUAV2XdVSuhnQeBT82MpaAWffFzgvUH2KmixhnA.jpg" width="200"/>
+      <div>
+       Tokyo
+      </div>
+     </div>
+     <div class="place">
+      <img alt="Temple in Bali" height="120" src="https://storage.googleapis.com/a1aa/image/1eTosZhryYQJcijqE8zM5w15WbAN6a1HmMuLV89fFVdRx4wTA.jpg" width="200"/>
+      <div>
+       Bali
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="quick-links">
+    <h2>
+     Quick links
+    </h2>
+    <div class="links">
+     <a class="link" href="#">
+      Profile
+     </a>
+     <a class="link" href="#">
+      Payment
+     </a>
+     <a class="link" href="#">
+      Travel credit
+     </a>
+     <a class="link" href="#">
+      Invite friends
+     </a>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

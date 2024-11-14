@@ -1,0 +1,194 @@
+<html>
+<head>
+    <title>Four Seasons Resort, Maldives</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .image-container {
+            width: 100%;
+            height: 300px;
+            background-image: url('https://placehold.co/600x300');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            position: relative;
+        }
+        .image-container::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .info-box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .info-box div {
+            width: 48%;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .info-box div p {
+            margin: 5px 0;
+            color: #6c757d;
+        }
+        .section-title {
+            font-size: 18px;
+            margin: 20px 0 10px;
+        }
+        .section-content {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+        .amenities {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .amenities div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .amenities div i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #6c757d;
+        }
+        .map {
+            width: 100%;
+            height: 200px;
+            background-color: #b3e5fc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 14px;
+        }
+        .reviews {
+            margin-bottom: 20px;
+        }
+        .review {
+            margin-bottom: 20px;
+        }
+        .review h3 {
+            font-size: 14px;
+            margin: 0;
+        }
+        .review p {
+            font-size: 12px;
+            color: #6c757d;
+            margin: 5px 0;
+        }
+        .review .stars {
+            color: #ffc107;
+        }
+        .reserve-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container"></div>
+        <h1>Four Seasons Resort, Maldives</h1>
+        <div class="info-box">
+            <div>
+                <h2>4.9</h2>
+                <p>Rating</p>
+            </div>
+            <div>
+                <h2>2</h2>
+                <p>Bedrooms</p>
+            </div>
+        </div>
+        <div class="section-title">About this place</div>
+        <div class="section-content">
+            The Four Seasons Resort is set in a pristine, natural wilderness that offers a world of luxury and privacy in the UNESCO World Biosphere Reserve.
+        </div>
+        <div class="section-title">What this place offers</div>
+        <div class="amenities">
+            <div><i class="fas fa-wifi"></i> Wifi</div>
+            <div><i class="fas fa-car"></i> Free parking</div>
+        </div>
+        <div class="section-title">Where you'll be</div>
+        <div class="map">Amaya kuda rah</div>
+        <div class="section-title">4.83 · 36 reviews</div>
+        <div class="reviews">
+            <div class="review">
+                <h3>James</h3>
+                <p>1 month ago</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>We had a great time here, the view was amazing!</p>
+            </div>
+            <div class="review">
+                <h3>Caroline</h3>
+                <p>1 month ago</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>The house is very clean and cozy. The host is very nice and helpful.</p>
+            </div>
+            <div class="review">
+                <h3>Michael</h3>
+                <p>2 months ago</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Great location and beautiful house.</p>
+            </div>
+        </div>
+        <button class="reserve-button">Reserve</button>
+    </div>
+</body>
+</html>
